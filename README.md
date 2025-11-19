@@ -109,7 +109,7 @@ pip install uv
 uv sync --locked
 ```
 
-### 3. (Optional) Create a jupyter kernel to run the notebooks
+### 3. Create a jupyter kernel to run the notebooks
 ```bash
 python -m ipykernel install --user --name="name_of_venv" --display-name "display_name_of_venv"
 ```
@@ -127,4 +127,11 @@ If the Dockerfile is included in your repo, build the image with:
 ```bash
 docker build -t song-popularity .
 ```
+### 2. Run the Docker Container
 
+Once the image is built (or if the image is already available), run the container:
+
+```bash
+docker run -it --rm -p 9696:9696 song-popularity
+```
+You can now access the FastAPI application at: http://localhost:9696/docs
