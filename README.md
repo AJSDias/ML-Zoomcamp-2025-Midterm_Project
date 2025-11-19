@@ -81,3 +81,23 @@ The dataset used is publicly available on [Kaggle](https://www.kaggle.com/datase
   "time_signature": 4,
   "track_genre": "pop"
 }
+```
+---
+
+## Running Locally
+
+### 1. Set Up a Python Virtual Environment
+
+It’s recommended to use a virtual environment to isolate dependencies.
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment (Linux/macOS)
+source venv/bin/activate
+
+# Activate the environment (Windows)
+venv\Scripts\activate
+```
+
