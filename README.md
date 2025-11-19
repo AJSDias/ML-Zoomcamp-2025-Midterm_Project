@@ -113,3 +113,18 @@ uv sync --locked
 ```bash
 python -m ipykernel install --user --name="name_of_venv" --display-name "display_name_of_venv"
 ```
+
+---
+
+## Docker Containerization
+
+The application is already containerized. You can use the Docker image provided in this repository to run the FastAPI app without installing dependencies locally.
+
+### 1. Build the Docker Image
+
+If the Dockerfile is included in your repo, build the image with:
+
+```bash
+docker build -t song-popularity .
+```
+
