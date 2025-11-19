@@ -81,3 +81,66 @@ The dataset used is publicly available on [Kaggle](https://www.kaggle.com/datase
   "time_signature": 4,
   "track_genre": "pop"
 }
+```
+---
+
+## Run using Docker
+
+The application is already containerized. You can use the Docker image provided in this repository to run the FastAPI app without installing dependencies locally.
+
+### 1. Build the Docker Image
+
+If the Dockerfile is included in your repo, build the image with:
+
+```bash
+docker build -t song-popularity .
+```
+### 2. Run the Docker Container
+
+Once the image is built (or if the image is already available), run the container:
+
+```bash
+docker run -it --rm -p 9696:9696 song-popularity
+```
+You can now access the FastAPI application at: http://localhost:9696/docs
+
+---
+
+## Cloud deployment
+
+The application was successfully deployed in the cloud using Fly.io, however I don't have any remaining credits to keep the application live.
+You can find an example of the code used to deploy the app in the cloud in the folder "screenshots".
+The image shows that the process worked but the deployment was blocked only due to lack of credits 
+
+
+---
+
+## (Optional) Running Locally
+
+### 1. Set Up a Python Virtual Environment
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment (Linux/macOS)
+source venv/bin/activate
+
+# Activate the environment (Windows)
+venv\Scripts\activate
+```
+
+### 2. Install Dependencies with uv
+
+```bash
+# Install uv if not already installed
+pip install uv
+
+# Install dependencies from the lock file
+uv sync --locked
+```
+
+### 3. Create a jupyter kernel to run the notebooks
+```bash
+python -m ipykernel install --user --name="name_of_venv" --display-name "display_name_of_venv"
+```
