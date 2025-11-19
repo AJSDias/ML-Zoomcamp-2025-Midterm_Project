@@ -84,7 +84,7 @@ The dataset used is publicly available on [Kaggle](https://www.kaggle.com/datase
 ```
 ---
 
-## Running Locally
+## (Optional) Running Locally
 
 ### 1. Set Up a Python Virtual Environment
 
@@ -116,7 +116,7 @@ python -m ipykernel install --user --name="name_of_venv" --display-name "display
 
 ---
 
-## Docker Containerization
+## Using Docker
 
 The application is already containerized. You can use the Docker image provided in this repository to run the FastAPI app without installing dependencies locally.
 
