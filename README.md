@@ -84,6 +84,28 @@ The dataset used is publicly available on [Kaggle](https://www.kaggle.com/datase
 ```
 ---
 
+## Run using Docker
+
+The application is already containerized. You can use the Docker image provided in this repository to run the FastAPI app without installing dependencies locally.
+
+### 1. Build the Docker Image
+
+If the Dockerfile is included in your repo, build the image with:
+
+```bash
+docker build -t song-popularity .
+```
+### 2. Run the Docker Container
+
+Once the image is built (or if the image is already available), run the container:
+
+```bash
+docker run -it --rm -p 9696:9696 song-popularity
+```
+You can now access the FastAPI application at: http://localhost:9696/docs
+
+---
+
 ## (Optional) Running Locally
 
 ### 1. Set Up a Python Virtual Environment
@@ -113,25 +135,3 @@ uv sync --locked
 ```bash
 python -m ipykernel install --user --name="name_of_venv" --display-name "display_name_of_venv"
 ```
-
----
-
-## Using Docker
-
-The application is already containerized. You can use the Docker image provided in this repository to run the FastAPI app without installing dependencies locally.
-
-### 1. Build the Docker Image
-
-If the Dockerfile is included in your repo, build the image with:
-
-```bash
-docker build -t song-popularity .
-```
-### 2. Run the Docker Container
-
-Once the image is built (or if the image is already available), run the container:
-
-```bash
-docker run -it --rm -p 9696:9696 song-popularity
-```
-You can now access the FastAPI application at: http://localhost:9696/docs
