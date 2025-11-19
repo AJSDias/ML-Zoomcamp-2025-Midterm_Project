@@ -1,5 +1,0 @@
-# do more feature engineering
-# try different models
-# convert model training to train.py
-# setup flask api
-# setup docker
