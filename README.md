@@ -88,8 +88,6 @@ The dataset used is publicly available on [Kaggle](https://www.kaggle.com/datase
 
 ### 1. Set Up a Python Virtual Environment
 
-It’s recommended to use a virtual environment to isolate dependencies.
-
 ```bash
 # Create a virtual environment
 python -m venv venv
@@ -101,3 +99,17 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
+### 2. Install Dependencies with uv
+
+```bash
+# Install uv if not already installed
+pip install uv
+
+# Install dependencies from the lock file
+uv sync --locked
+```
+
+### 3. (Optional) Create a jupyter kernel to run the notebooks
+```bash
+python -m ipykernel install --user --name="name_of_venv" --display-name "display_name_of_venv"
+```
