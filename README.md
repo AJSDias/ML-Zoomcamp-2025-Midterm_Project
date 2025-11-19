@@ -106,6 +106,15 @@ You can now access the FastAPI application at: http://localhost:9696/docs
 
 ---
 
+## Cloud deployment
+
+The application was successfully deployed in the cloud using Fly.io, however I don't have any remaining credits to keep the application live.
+You can find an example of the code used to deploy the app in the cloud in the folder "screenshots".
+The image shows that the process worked but the deployment was blocked only due to lack of credits 
+
+
+---
+
 ## (Optional) Running Locally
 
 ### 1. Set Up a Python Virtual Environment
